@@ -17,11 +17,11 @@ This is a helper class that help you read and write Firebase realtime database e
 
 ```javascript
 const firebaseConfig = {
-  apiKey: "{your api Key}",
-  authDomain: "{your project id}.firebaseapp.com",
-  databaseURL: "https://{your project info}.firebaseio.com",
-  projectId: "{your project id}",
-  storageBucket: "{your project id}.appspot.com",
+  apiKey: "your-api-Key",
+  authDomain: "your-project-id.firebaseapp.com",
+  databaseURL: "https://your-project-id.firebaseio.com",
+  projectId: "your-project-id",
+  storageBucket: "your-project-id.appspot.com",
   messagingSenderId: "{}",
   appId: "{}",
   measurementId: "{}"
@@ -91,6 +91,8 @@ db.set("the path of node you want to update", value);
 ```javascript
 db.set("childnode-2/location", "12");
 ```
+
+### update a node
 
 ```javascript
 db.update("the path of node you want to update", object_or_value, [callback]);

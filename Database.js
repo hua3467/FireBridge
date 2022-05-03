@@ -64,6 +64,18 @@
             console.log("ERROR: " + error.code);
         });
     }
+
+    getChildrenKeys(location, callback) {
+        this.#db.ref(this.#root + '/' + location).once("value").then( snapshot => {
+            const keys = [];
+            snapshot.forEach(child => {
+                keys.push(child.key);
+            });
+            callback( keys );
+        }, error => {
+            console.log("ERROR: " + error.code);
+        });
+    }
     
     /**
      * 

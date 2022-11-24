@@ -72,7 +72,7 @@
      * @param {()=>{}} callback 
      */
     listItemsByKey(location, key, callback){
-        read(location, data => {
+        this.read(location, data => {
             const items = [];
             data.forEach( item => {
                 if (!items.includes(item[key])) {

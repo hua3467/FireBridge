@@ -1,7 +1,5 @@
 This is a helper class that help you read and write Firebase realtime database easily.
 
-## Prerequisite
-
 ## Realtime Database Configuration
 
 1. Before loading this class, you must add Firebase cdn in your HTML document:
@@ -11,7 +9,11 @@ This is a helper class that help you read and write Firebase realtime database e
 <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
 ```
 
-2. insert your web app's Firebase configuration
+2. Add this library in two ways:
+- Go to [https://github.com/hua3467/easy-firebase-rtdb/],  download `Database.js` or `Database@0.2.js`, and attach to your page,
+- Use https://hua3467.github.io/easy-firebase-rtdb/Database@0.2.js.
+
+3. insert your web app's Firebase configuration
 
 ```javascript
 const firebaseConfig = {
@@ -24,6 +26,38 @@ const firebaseConfig = {
   appId: "{}",
   measurementId: "{}"
 };
+```
+
+Example:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
+    <script src="https://hua3467.github.io/easy-firebase-rtdb/Database@0.2.js"></script>
+    <script>
+      const firebaseConfig = {
+          apiKey: "your-api-Key",
+          authDomain: "your-project-id.firebaseapp.com",
+          databaseURL: "https://your-project-id.firebaseio.com",
+          projectId: "your-project-id",
+          storageBucket: "your-project-id.appspot.com",
+          messagingSenderId: "{}",
+          appId: "{}",
+          measurementId: "{}"
+        };
+    </script>
+    
+</body>
+</html>
 ```
 
 ## Usage
